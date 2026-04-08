@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/guard-secrets.sh",
+            "description": "하드코딩된 시크릿 감지 및 차단"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/check-test-reminder.sh",
+            "description": "비즈니스 로직 변경 시 테스트 알림"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "작업을 완료하기 전, docs/40_workflow/definition-of-done.md의 체크리스트를 확인하세요. 미완료 항목이 있다면 나열하고 처리 방법을 제안하세요."
+          }
+        ]
+      }
+    ]
+  }
+}

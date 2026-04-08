@@ -1,0 +1,20 @@
+{
+  "id": "268cb55c-9785-4ae7-8e47-4cf1baefd44c",
+  "created_at": "2026-04-08T04:21:47.850422",
+  "title": "New Conversation",
+  "messages": [
+    {
+      "role": "user",
+      "content": "AI Agent\uc5d0\uac8c Product\uc5d0 \ub300\ud55c \uac1c\ubc1c \uaddc\uce59\uc744 \uc138\uc6b8\ub824\uace0 \ud574. \uc6b0\uc120 Agent\uc758 \ud589\ub3d9\uc744 \uc81c\uc5b4\ud560 default docs\uc758 file tree\ub97c \ub9cc\ub4e4\uc5b4\uc918"
+    },
+    {
+      "role": "assistant",
+      "stage1": [],
+      "stage2": [],
+      "stage3": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "response": "Error: Unable to generate final synthesis."
+      }
+    }
+  ]
+}
